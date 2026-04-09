@@ -23,7 +23,7 @@ As skills ficam na pasta `.claude/skills/` na raiz do projeto. Cada skill é um 
 
 | Skill | Arquivo | Uso |
 |---|---|---|
-| Arquiteto mobile | `.claude/skills/mobile-architect/SKILL.md` | Planejamento e design de soluções |
+| Arquiteto mobile | `.claude/skills/dev-architect/SKILL.md` | Planejamento e design de soluções |
 | Desenvolvedor React Native | `.claude/skills/dev-react-native/SKILL.md` | Implementação de código |
 | Revisor de código | `.claude/skills/dev-code-review/SKILL.md` | Revisão do código gerado |
 | Quality assurance | `.claude/skills/quality-assurance/SKILL.md` | Validação da implementação |
@@ -50,9 +50,9 @@ Antes de qualquer coisa:
 
 ---
 
-### Etapa 1 — Planejamento (skill: `mobile-architect`)
+### Etapa 1 — Planejamento (skill: `dev-architect`)
 
-Carregue a skill `.claude/skills/mobile-architect/SKILL.md` e monte um plano de execução detalhado antes de escrever qualquer linha de código.
+Carregue a skill `.claude/skills/dev-architect/SKILL.md` e monte um plano de execução detalhado antes de escrever qualquer linha de código.
 
 O plano deve conter:
 
