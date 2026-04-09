@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Na morte da bezerra",
+    "slug": "na-morte-da-bezerra",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "nadmb",
+    "platforms": ["ios", "android"],
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "plugins": ["expo-router"]
+  }
+}
