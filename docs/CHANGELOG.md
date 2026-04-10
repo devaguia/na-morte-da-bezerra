@@ -4,6 +4,20 @@
 
 ## [Não publicado]
 
+### Lista inicial de assuntos — abril de 2026
+
+52 assuntos curados adicionados a `data/topics.ts` como conteúdo da v1.
+
+**Adicionado:**
+- 52 assuntos em português do Brasil, distribuídos igualmente entre 4 categorias: `filosofico`, `cientifico`, `absurdo`, `misto` (13 cada)
+- IDs sequenciais de "001" a "052", usados pelo histórico do AsyncStorage para evitar repetição
+- Campos `title` (máx. 4 palavras) e `expansion` (máx. 2 frases) preenchidos em todos os assuntos
+
+**Validado:**
+- `npx tsc --noEmit` sem erros
+- 52 IDs únicos, sem gaps na sequência
+- Contrato de importação com `randomizer.ts` e `share.ts` preservado
+
 ### Setup do projeto Expo — abril de 2026
 
 Inicialização completa da infraestrutura técnica do app.

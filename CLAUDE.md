@@ -208,7 +208,7 @@ A tarefa é: [descrição da tarefa]
 | README | ✅ Concluído |
 | Processo de execução (AGENTS) | ✅ Concluído |
 | Setup do projeto Expo | ✅ Concluído |
-| Lista inicial de assuntos | ⏳ Pendente |
+| Lista inicial de assuntos | ✅ Concluído |
 | Tela inicial | ⏳ Pendente |
 | Tela do assunto | ⏳ Pendente |
 | Lógica de sorteio com histórico | ⏳ Pendente |
