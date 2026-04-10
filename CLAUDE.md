@@ -213,7 +213,7 @@ A tarefa é: [descrição da tarefa]
 | Tela inicial | ✅ Concluído |
 | Tela do assunto | ✅ Concluído |
 | Lógica de sorteio com histórico | ✅ Concluído |
-| Formulário de sugestão + backend | ⏳ Pendente |
+| Formulário de sugestão + backend | ✅ Concluído |
 | Compartilhamento via Share API | ✅ Concluído |
 | Clipboard (cópia do assunto) | ✅ Concluído |
 | Polimento visual | ✅ Concluído |

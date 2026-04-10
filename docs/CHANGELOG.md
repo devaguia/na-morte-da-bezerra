@@ -4,6 +4,16 @@
 
 ## [Não publicado]
 
+### Formulário de sugestão funcional — abril de 2026
+
+**Adicionado:**
+- `utils/suggestions.ts` — `sendSuggestion(text)` faz POST para `EXPO_PUBLIC_WEBHOOK_URL` com payload `{ suggestion, timestamp }`; `AbortController` com timeout de 10s; parse seguro do JSON da resposta; propaga erros para o componente
+
+**Alterado:**
+- `app/suggest.tsx` — substituído mock `setSent(true)` por chamada real a `sendSuggestion`; adicionados estados `isSending` e `error`; botão mostra "Enviando..." e fica desabilitado durante a requisição; estado de erro com botão "Tentar novamente" (texto preservado); proteção contra duplo envio
+
+---
+
 ### Clipboard e correção do teclado — abril de 2026
 
 **Adicionado:**

@@ -74,7 +74,8 @@ Contém toda a lógica de negócio, isolada e testável independentemente.
 |---|---|
 | `utils/randomizer.ts` | Sorteio de assuntos com controle de histórico via AsyncStorage |
 | `utils/colors.ts` | Paleta de cores de fundo e função de seleção aleatória |
-| `utils/share.ts` | Composição da mensagem e chamada da Share API nativa |
+| `utils/share.ts` | Composição da mensagem e chamada da Share API nativa; cópia para clipboard |
+| `utils/suggestions.ts` | Envio de sugestões via fetch POST para o webhook do Google Apps Script |
 
 ### 2.4 Assets (`assets/`)
 
@@ -341,7 +342,7 @@ O app **não usa gerenciador de estado global** (sem Redux, Zustand, Context API
 | Tela | Estado local |
 |---|---|
 | `topic.tsx` | `currentTopic`, `currentColor`, `isLoading`, `loaderMessage`, `copied` |
-| `suggest.tsx` | `text`, `sent` |
+| `suggest.tsx` | `text`, `sent`, `isSending`, `error` |
 
 O único estado persistido é o histórico de assuntos vistos, que vive no AsyncStorage e é acessado via `randomizer.ts`.
 
