@@ -4,6 +4,21 @@
 
 ## [Não publicado]
 
+### Tela inicial — abril de 2026
+
+Implementação da tela inicial do app (`app/index.tsx`) e stub da tela do assunto (`app/topic.tsx`).
+
+**Adicionado:**
+- `app/index.tsx` — tela inicial com fundo `#FBF3EB`, espaço reservado para a ilustração da bezerra, texto de instrução com animação de pulsação (`Animated.loop`) e navegação para `/topic` via `Pressable`
+- `app/topic.tsx` — stub mínimo como destino de rota, a ser implementado na próxima tarefa
+
+**Validado:**
+- Animação com `useNativeDriver: true` — off the JS thread
+- Cleanup do loop no desmonte do componente — sem vazamento de memória
+- `npx tsc --noEmit` sem erros
+
+---
+
 ### Lista inicial de assuntos — abril de 2026
 
 52 assuntos curados adicionados a `data/topics.ts` como conteúdo da v1.
