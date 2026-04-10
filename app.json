@@ -17,6 +17,11 @@
       "bundleIdentifier": "com.nadmb.app"
     },
     "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/bezerra.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "android": {
       "package": "com.nadmb.app",
       "adaptiveIcon": {
