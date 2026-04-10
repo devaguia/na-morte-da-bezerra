@@ -207,7 +207,7 @@ A tarefa é: [descrição da tarefa]
 | Documentação técnica (ARCHITECTURE) | ✅ Concluído |
 | README | ✅ Concluído |
 | Processo de execução (AGENTS) | ✅ Concluído |
-| Setup do projeto Expo | ⏳ Pendente |
+| Setup do projeto Expo | ✅ Concluído |
 | Lista inicial de assuntos | ⏳ Pendente |
 | Tela inicial | ⏳ Pendente |
 | Tela do assunto | ⏳ Pendente |
