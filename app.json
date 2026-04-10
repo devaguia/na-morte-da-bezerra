@@ -18,15 +18,15 @@
     },
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/bezerra.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#FBF3EB"
     },
     "android": {
       "package": "com.nadmb.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#FBF3EB"
       }
     },
     "plugins": [
