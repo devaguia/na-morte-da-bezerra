@@ -4,6 +4,28 @@
 
 ## [Não publicado]
 
+### Clipboard e correção do teclado — abril de 2026
+
+**Adicionado:**
+- `utils/share.ts` — `copyTopic(topic)` compõe `"${title}\n\n${expansion}"` e copia para o clipboard via `expo-clipboard`; falha silenciosa com try/catch
+- `app/topic.tsx` — ícone de copiar (`copy-outline`) ao lado do ícone de compartilhar no footer; estado `copied` com feedback visual (`checkmark-outline` por 1.5s); `copyTimeoutRef` com cleanup no unmount; handler `handleCopy` com `useCallback`
+
+**Corrigido:**
+- `app/suggest.tsx` — `KeyboardAvoidingView` substituiu `View` como elemento raiz do layout (`flex: 1`, `justifyContent: 'flex-end'`, `behavior` condicional por plataforma); sheet não fica mais atrás do teclado ao abrir o formulário; `minHeight: 380` removido para não conflitar com redução de altura no Android
+
+---
+
+### Polimento visual e mascote — abril de 2026
+
+**Adicionado:**
+- Fonte customizada BJCree em 4 pesos (`Regular`, `Medium`, `SemiBold`, `Bold`) integrada via `expo-font` e `SplashScreen.preventAutoHideAsync`
+- `app/topic.tsx` — header com título "Na Morte da Bezerra" (BJCree-Bold, uppercase); rótulo de categoria acima do título; ícone de compartilhar (`share-social-outline`) substituindo texto "Compartilhar"; estados de opacidade ativo/desabilitado no ícone
+- `app/index.tsx` — nome do app "Na Morte da Bezerra!" abaixo da imagem; ícone de compartilhar movido para o footer (fora da área de toque central); `paddingHorizontal` do texto de instrução aumentado
+- `app/suggest.tsx` — formulário como bottom sheet com animação slide-up (`Animated.timing` 320ms); handle, header, campo de texto, contador, botão e estado de sucesso
+- `assets/bezerra.png` — mascote integrada como logo na tela inicial (tamanho proporcional à largura da tela) e como ícone do app em `app.json`
+
+---
+
 ### Tela do assunto + utilitários — abril de 2026
 
 Implementação da tela do assunto completa e dos três utilitários de negócio.

@@ -88,6 +88,7 @@ Não implemente, não sugira e não discuta as seguintes funcionalidades para a 
 | Navegação | Expo Router |
 | Storage local | AsyncStorage |
 | Compartilhamento | expo-sharing |
+| Clipboard | expo-clipboard |
 | Backend (sugestões) | Google Apps Script + Google Sheets |
 | Build / Publicação | EAS Build |
 
@@ -214,7 +215,8 @@ A tarefa é: [descrição da tarefa]
 | Lógica de sorteio com histórico | ✅ Concluído |
 | Formulário de sugestão + backend | ⏳ Pendente |
 | Compartilhamento via Share API | ✅ Concluído |
-| Polimento visual | ⏳ Pendente |
+| Clipboard (cópia do assunto) | ✅ Concluído |
+| Polimento visual | ✅ Concluído |
 | Build e publicação (EAS) | ⏳ Pendente |
 
 ---

@@ -80,9 +80,8 @@ Contém toda a lógica de negócio, isolada e testável independentemente.
 
 | Arquivo | Uso |
 |---|---|
-| `assets/bezerra.svg` | Ilustração da tela inicial |
-| `assets/icon.png` | Ícone do app (gerado via Expo) |
-| `assets/splash.png` | Splash screen (gerado via Expo) |
+| `assets/bezerra.png` | Ilustração da tela inicial e ícone do app |
+| `assets/fonts/` | Família BJCree (Regular, Medium, SemiBold, Bold) |
 
 ---
 
@@ -168,6 +167,7 @@ renderiza título + expansão + fundo colorido
 
 Toque na tela → repete o ciclo acima
 Toque em compartilhar → chama share.shareTopic(topic)
+Toque em copiar → chama share.copyTopic(topic) → feedback visual 1.5s
 Toque em "Sugerir" → navega para /suggest
 ```
 
@@ -238,19 +238,29 @@ const palette = [
 ```typescript
 // Interface pública do módulo
 export async function shareTopic(topic: Topic): Promise<void>
+export async function copyTopic(topic: Topic): Promise<void>
+export async function shareDownloadLink(): Promise<void>
 ```
 
 **Responsabilidades:**
-- Compor a mensagem de compartilhamento
-- Chamar a Share API nativa do Expo
+- Compor e disparar o compartilhamento nativo via Share API
+- Copiar o conteúdo do assunto para o clipboard via `expo-clipboard`
+- Compartilhar o link de download do app
 
-**Formato da mensagem compartilhada:**
+**Formato da mensagem compartilhada (`shareTopic`):**
 ```
 [título do assunto]
 
 [frase de expansão]
 
 — Na morte da bezerra
+```
+
+**Formato do texto copiado (`copyTopic`):**
+```
+[título do assunto]
+
+[frase de expansão]
 ```
 
 ---
@@ -330,8 +340,8 @@ O app **não usa gerenciador de estado global** (sem Redux, Zustand, Context API
 
 | Tela | Estado local |
 |---|---|
-| `topic.tsx` | `currentTopic`, `currentColor`, `isLoading` |
-| `suggest.tsx` | `inputText`, `isSending`, `isSent` |
+| `topic.tsx` | `currentTopic`, `currentColor`, `isLoading`, `loaderMessage`, `copied` |
+| `suggest.tsx` | `text`, `sent` |
 
 O único estado persistido é o histórico de assuntos vistos, que vive no AsyncStorage e é acessado via `randomizer.ts`.
 
@@ -343,12 +353,14 @@ O único estado persistido é o histórico de assuntos vistos, que vive no Async
 
 | Pacote | Versão | Uso |
 |---|---|---|
-| `expo` | ~51.x | Framework base |
-| `expo-router` | ~3.x | Navegação baseada em arquivos |
-| `@react-native-async-storage/async-storage` | ~1.x | Histórico local |
-| `expo-sharing` | ~12.x | Compartilhamento nativo |
-| `react-native` | 0.74.x | Runtime nativo |
-| `react` | 18.x | UI |
+| `expo` | ~54.x | Framework base |
+| `expo-router` | ~6.x | Navegação baseada em arquivos |
+| `@react-native-async-storage/async-storage` | ~2.x | Histórico local |
+| `expo-font` | ~13.x | Carregamento de fontes customizadas |
+| `expo-splash-screen` | ~0.29.x | Controle da splash screen |
+| `expo-clipboard` | ~8.x | Cópia para clipboard |
+| `react-native` | 0.81.x | Runtime nativo |
+| `react` | 19.x | UI |
 
 ### 9.2 Dependências de desenvolvimento
 
