@@ -12,6 +12,7 @@ import {
   View,
 } from 'react-native';
 import { router } from 'expo-router';
+import { sendSuggestion } from '../utils/suggestions';
 
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 const SLIDE_DURATION = 320;
@@ -19,6 +20,8 @@ const SLIDE_DURATION = 320;
 export default function SuggestScreen() {
   const [text, setText] = useState<string>('');
   const [sent, setSent] = useState<boolean>(false);
+  const [isSending, setIsSending] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
   const translateY = useRef(new Animated.Value(SCREEN_HEIGHT)).current;
 
   useEffect(() => {
@@ -29,9 +32,21 @@ export default function SuggestScreen() {
     }).start();
   }, [translateY]);
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (text.trim().length === 0) return;
-    setSent(true);
+    setIsSending(true);
+    try {
+      await sendSuggestion(text.trim());
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      setIsSending(false);
+    }
+  };
+
+  const handleRetry = () => {
+    setError(false);
   };
 
   const handleClose = () => {
@@ -60,10 +75,21 @@ export default function SuggestScreen() {
             <Text style={styles.successEmoji}>🎉</Text>
             <Text style={styles.successTitle}>Sugestão enviada!</Text>
             <Text style={styles.successDescription}>
-              Obrigado! A bezerra vai analisar com cuidado.
+              Obrigado! A vamos analisar sua sugestão com cuidado.
             </Text>
             <TouchableOpacity style={styles.backButton} onPress={handleClose}>
               <Text style={styles.backButtonText}>Voltar</Text>
+            </TouchableOpacity>
+          </View>
+        ) : error ? (
+          <View style={styles.successContainer}>
+            <Text style={styles.successEmoji}>😕</Text>
+            <Text style={styles.successTitle}>Não foi possível enviar</Text>
+            <Text style={styles.successDescription}>
+              Verifique sua conexão e tente novamente.
+            </Text>
+            <TouchableOpacity style={styles.backButton} onPress={handleRetry}>
+              <Text style={styles.backButtonText}>Tentar novamente</Text>
             </TouchableOpacity>
           </View>
         ) : (
@@ -82,11 +108,13 @@ export default function SuggestScreen() {
             />
             <Text style={styles.counter}>{text.length}/300</Text>
             <TouchableOpacity
-              style={[styles.sendButton, text.trim().length === 0 && styles.sendButtonDisabled]}
+              style={[styles.sendButton, (isSending || text.trim().length === 0) && styles.sendButtonDisabled]}
               onPress={handleSend}
-              disabled={text.trim().length === 0}
+              disabled={isSending || text.trim().length === 0}
             >
-              <Text style={styles.sendButtonText}>Enviar sugestão</Text>
+              <Text style={styles.sendButtonText}>
+                {isSending ? 'Enviando...' : 'Enviar sugestão'}
+              </Text>
             </TouchableOpacity>
           </View>
         )}
