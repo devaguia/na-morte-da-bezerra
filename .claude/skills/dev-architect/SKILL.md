@@ -28,7 +28,7 @@ Carregada na **Etapa 1** do processo definido em `AGENTS.md`, após a leitura do
 
 ### 1. Analisar a tarefa
 
-Antes de escrever o plano, responda internamente:
+Antes de qualquer outra ação, leia a tarefa recebida com atenção e responda internamente:
 
 - O que exatamente precisa ser feito e qual o resultado esperado?
 - A tarefa está dentro do escopo da v1 definido no PRD?
@@ -37,7 +37,50 @@ Antes de escrever o plano, responda internamente:
 
 Se a tarefa contradizer uma decisão documentada, aponte o conflito explicitamente e aguarde instrução antes de continuar.
 
-### 2. Mapear o impacto
+---
+
+### 2. Enriquecer o contexto com perguntas
+
+Antes de mapear arquivos ou montar o plano, faça perguntas ao solicitante para eliminar ambiguidades e garantir que o plano será construído com o máximo de contexto possível.
+
+**Quando perguntar:**
+- Sempre que a tarefa tiver mais de uma forma válida de ser implementada
+- Sempre que houver comportamento de borda não descrito na tarefa
+- Sempre que a tarefa envolver decisão visual ou de UX não coberta pelo PRD
+- Sempre que o escopo da tarefa não estiver claro — o que entra e o que fica de fora
+
+**Como perguntar:**
+
+Agrupe as perguntas por tema. Seja direto e objetivo — cada pergunta deve ter um propósito claro que impacta o plano. Não faça perguntas cuja resposta já está nos documentos de referência.
+
+Apresente as perguntas antes de montar o plano, no seguinte formato:
+
+```markdown
+## Perguntas antes do plano — [nome da tarefa]
+
+Antes de montar o plano, preciso esclarecer alguns pontos:
+
+**Sobre o comportamento:**
+1. [pergunta objetiva com impacto claro no plano]
+2. [pergunta objetiva com impacto claro no plano]
+
+**Sobre o visual:**
+3. [pergunta objetiva com impacto claro no plano]
+
+**Sobre o escopo:**
+4. [o que entra nesta tarefa? / o que fica para depois?]
+```
+
+**Aguarde as respostas** antes de avançar para o Passo 3. Não monte o plano com base em suposições quando uma pergunta pode resolver a ambiguidade.
+
+**Quando não perguntar:**
+- Se a tarefa for suficientemente clara e os documentos de referência já cobrem todas as decisões necessárias, pule esta etapa e vá direto ao Passo 3, sinalizando que não há ambiguidades.
+
+---
+
+### 3. Mapear o impacto
+
+Com o contexto enriquecido pelas respostas, identifique:
 
 - Quais arquivos existentes serão modificados
 - Quais arquivos novos precisarão ser criados
@@ -46,7 +89,7 @@ Se a tarefa contradizer uma decisão documentada, aponte o conflito explicitamen
 
 Cruze sempre com a estrutura definida em `docs/ARCHITECTURE.md`. Não proponha estruturas novas sem justificativa explícita.
 
-### 3. Montar e entregar o plano
+### 4. Montar e entregar o plano
 
 Use o formato abaixo sem omitir seções. Salve em `plans/[nome-da-tarefa].md` e aguarde aprovação explícita antes de sinalizar início da Etapa 2.
 
@@ -66,7 +109,19 @@ Use o formato abaixo sem omitir seções. Salve em `plans/[nome-da-tarefa].md` e
 ## Entendimento da tarefa
 
 [Descreva com suas palavras o que precisa ser feito e qual o resultado esperado.
+Incorpore aqui o contexto obtido nas perguntas da etapa anterior.
 Seja específico — demonstre que entendeu o que a tarefa implica, não apenas parafaseie.]
+
+---
+
+## Contexto levantado
+
+[Registre as perguntas feitas e as respostas recebidas que impactaram o plano.
+Se nenhuma pergunta foi necessária, escreva "Tarefa suficientemente clara — sem perguntas necessárias."]
+
+| Pergunta | Resposta | Impacto no plano |
+|---|---|---|
+| [pergunta feita] | [resposta do solicitante] | [como isso moldou uma decisão do plano] |
 
 ---
 
@@ -143,6 +198,8 @@ plans/paleta-de-cores.md
 - Não instale dependências — apenas liste o que será necessário
 - Não proponha mudanças arquiteturais sem apontar conflito com `docs/ARCHITECTURE.md`
 - Não proponha funcionalidades fora do escopo da v1 definido em `docs/PRD.md`
+- Não faça perguntas cuja resposta já está nos documentos de referência
+- Não monte o plano com suposições quando uma pergunta pode resolver a ambiguidade
 - Não avance para a Etapa 2 sem aprovação explícita do desenvolvedor
 
 ---
@@ -154,6 +211,8 @@ Antes de entregar o plano, confirme:
 - [ ] Li `docs/PRD.md`, `docs/ARCHITECTURE.md` e `CLAUDE.md`
 - [ ] A tarefa está dentro do escopo da v1
 - [ ] Não há conflito com decisões documentadas
+- [ ] Perguntas foram feitas e respondidas — ou a tarefa foi considerada clara o suficiente
+- [ ] O contexto levantado está registrado na seção correspondente do plano
 - [ ] Todos os arquivos impactados foram mapeados
 - [ ] A sequência de execução é lógica e sem dependências circulares
 - [ ] Os critérios de aceitação são verificáveis
