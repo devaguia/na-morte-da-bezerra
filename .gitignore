@@ -13,3 +13,4 @@ ios/
 *.log
 npm-debug.*
 yarn.lock
+eas.json

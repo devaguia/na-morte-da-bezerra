@@ -5,7 +5,7 @@
   "build": {
     "preview": {
       "env": {
-        "EXPO_PUBLIC_WEBHOOK_URL": "https://script.google.com/macros/s/AKfycbxtZg9aUc_DtXEV3bPGvKoYven3NJHGn7O-DwYaZODD99Gd4mEdC9gZ25oVKPBlsgtdeA/exec"
+        "EXPO_PUBLIC_WEBHOOK_URL": ""
       },
       "android": {
         "buildType": "apk"
@@ -13,7 +13,7 @@
     },
     "production": {
       "env": {
-        "EXPO_PUBLIC_WEBHOOK_URL": "https://script.google.com/macros/s/AKfycbxtZg9aUc_DtXEV3bPGvKoYven3NJHGn7O-DwYaZODD99Gd4mEdC9gZ25oVKPBlsgtdeA/exec"
+        "EXPO_PUBLIC_WEBHOOK_URL": ""
       },
       "android": {
         "buildType": "app-bundle"
