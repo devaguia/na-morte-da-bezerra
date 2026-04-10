@@ -375,4 +375,362 @@ export const topics: Topic[] = [
     expansion:
       'Você não lembra dos primeiros três anos de vida, mas eles moldaram boa parte de quem você é hoje.',
   },
+
+  // --- filosofico (053–065) ---
+  {
+    id: '053',
+    category: 'filosofico',
+    title: 'O medo',
+    expansion:
+      'O medo protege ou limita? Na maior parte das vezes, aquilo que você mais teme nunca acontece — e mesmo assim moldou suas escolhas.',
+  },
+  {
+    id: '054',
+    category: 'filosofico',
+    title: 'A solidão',
+    expansion:
+      'Você consegue estar sozinho sem se sentir sozinho? A diferença entre solidão e isolamento é toda interna.',
+  },
+  {
+    id: '055',
+    category: 'filosofico',
+    title: 'A inveja',
+    expansion:
+      'A inveja revela o que você realmente quer, não o que você diz que quer. É um mapa honesto dos seus desejos mais escondidos.',
+  },
+  {
+    id: '056',
+    category: 'filosofico',
+    title: 'O perdão',
+    expansion:
+      'Perdoar alguém é mais sobre você do que sobre a outra pessoa. Carregar mágoa custa mais para quem carrega.',
+  },
+  {
+    id: '057',
+    category: 'filosofico',
+    title: 'A esperança',
+    expansion:
+      'A esperança é racional? Apostar que o futuro será melhor sem nenhuma evidência concreta pode ser otimismo — ou ilusão necessária.',
+  },
+  {
+    id: '058',
+    category: 'filosofico',
+    title: 'A beleza',
+    expansion:
+      'O que você considera belo foi decidido por cultura, experiência e acaso. Beleza universal pode não existir.',
+  },
+  {
+    id: '059',
+    category: 'filosofico',
+    title: 'O destino',
+    expansion:
+      'Se tudo que aconteceu tinha que acontecer, o arrependimento faz sentido? Ou é só uma forma de processar o que não podemos mudar?',
+  },
+  {
+    id: '060',
+    category: 'filosofico',
+    title: 'A justiça',
+    expansion:
+      'Você quer que o mundo seja justo ou só quer que seja justo com você? A resposta honesta pode surpreender.',
+  },
+  {
+    id: '061',
+    category: 'filosofico',
+    title: 'O amor',
+    expansion:
+      'Amor é sentimento ou decisão? Com o tempo, quase todo amor duradouro virou uma escolha repetida todos os dias.',
+  },
+  {
+    id: '062',
+    category: 'filosofico',
+    title: 'A gratidão',
+    expansion:
+      'Você agradece mais pelo que tem ou reclama mais do que falta? A proporção diz bastante sobre como você vê sua própria vida.',
+  },
+  {
+    id: '063',
+    category: 'filosofico',
+    title: 'A coragem',
+    expansion:
+      'Coragem não é ausência de medo — é agir mesmo com ele. Alguém sem medo não precisa de coragem.',
+  },
+  {
+    id: '064',
+    category: 'filosofico',
+    title: 'O poder',
+    expansion:
+      'O poder corrompe ou apenas revela quem a pessoa já era? Quando alguém muda no poder, o que exatamente mudou?',
+  },
+  {
+    id: '065',
+    category: 'filosofico',
+    title: 'A escolha',
+    expansion:
+      'Quantas das suas escolhas de hoje foram realmente suas? Hábito, pressão social e contexto respondem por boa parte delas.',
+  },
+
+  // --- cientifico (066–077) ---
+  {
+    id: '066',
+    category: 'cientifico',
+    title: 'As estrelas',
+    expansion:
+      'A maioria das estrelas que você vê no céu já não existe. Você está olhando para o passado — alguns milhões de anos atrás.',
+  },
+  {
+    id: '067',
+    category: 'cientifico',
+    title: 'O coração',
+    expansion:
+      'O coração bate cerca de 100 mil vezes por dia sem nenhuma instrução consciente sua. Você não controla nem a coisa mais vital que tem.',
+  },
+  {
+    id: '068',
+    category: 'cientifico',
+    title: 'As bactérias',
+    expansion:
+      'Seu corpo tem mais células bacterianas do que humanas. Em termos numéricos, você é mais bactéria do que gente.',
+  },
+  {
+    id: '069',
+    category: 'cientifico',
+    title: 'O fogo',
+    expansion:
+      'Fogo não é matéria — é um processo químico, uma reação em cadeia de oxidação. A chama que você vê não tem massa.',
+  },
+  {
+    id: '070',
+    category: 'cientifico',
+    title: 'As abelhas',
+    expansion:
+      'Abelhas tomam decisões coletivas sem nenhum líder central. A colmeia decide para onde migrar por uma espécie de votação em dança.',
+  },
+  {
+    id: '071',
+    category: 'cientifico',
+    title: 'A evolução',
+    expansion:
+      'O apêndice, a cóccix e os pelos do braço são resquícios de ancestrais que viviam de forma completamente diferente. Você carrega partes do passado evolutivo que não servem mais.',
+  },
+  {
+    id: '072',
+    category: 'cientifico',
+    title: 'O vácuo',
+    expansion:
+      'O vácuo absoluto não existe. O que chamamos de vácuo está cheio de partículas virtuais que aparecem e desaparecem constantemente.',
+  },
+  {
+    id: '073',
+    category: 'cientifico',
+    title: 'Os buracos negros',
+    expansion:
+      'No horizonte de eventos de um buraco negro, o tempo para. Um observador de fora veria você congelar para sempre no momento em que entrou.',
+  },
+  {
+    id: '074',
+    category: 'cientifico',
+    title: 'A pele',
+    expansion:
+      'Você troca completamente a camada externa da pele a cada duas a quatro semanas. O que você toca hoje não é o que tocou há um mês.',
+  },
+  {
+    id: '075',
+    category: 'cientifico',
+    title: 'A temperatura',
+    expansion:
+      'O frio não existe fisicamente — é apenas a ausência de calor. Você não sente frio; sente a retirada de energia térmica do seu corpo.',
+  },
+  {
+    id: '076',
+    category: 'cientifico',
+    title: 'Os corvos',
+    expansion:
+      'Corvos reconhecem rostos humanos, guardam rancor e ensinam filhotes a evitar pessoas específicas. Podem estar falando de você agora.',
+  },
+  {
+    id: '077',
+    category: 'cientifico',
+    title: 'O cérebro dormindo',
+    expansion:
+      'O cérebro consome quase a mesma quantidade de energia dormindo e acordado. O que ele faz enquanto você dorme ainda não é completamente entendido.',
+  },
+
+  // --- absurdo (078–090) ---
+  {
+    id: '078',
+    category: 'absurdo',
+    title: 'O despertador',
+    expansion:
+      'O despertador foi inventado para te tirar do único momento do dia em que você estava completamente em paz.',
+  },
+  {
+    id: '079',
+    category: 'absurdo',
+    title: 'O guarda-chuva',
+    expansion:
+      'O guarda-chuva só é útil quando você o leva. No dia que você leva, não chove. No dia que esquece, dilúvia.',
+  },
+  {
+    id: '080',
+    category: 'absurdo',
+    title: 'A senha',
+    expansion:
+      'Você tem dezenas de senhas para provar que é você mesmo. E às vezes erra. O sistema desconfia de você mais do que de qualquer invasor.',
+  },
+  {
+    id: '081',
+    category: 'absurdo',
+    title: 'O celular',
+    expansion:
+      'Você checa o celular em média 96 vezes por dia. Em algum momento isso parou de ser um hábito e virou um reflexo involuntário.',
+  },
+  {
+    id: '082',
+    category: 'absurdo',
+    title: 'As notificações',
+    expansion:
+      'Você configurou notificações para te avisar de tudo. Agora passa o dia sendo interrompido por atualizações que você mesmo pediu.',
+  },
+  {
+    id: '083',
+    category: 'absurdo',
+    title: 'O pijama',
+    expansion:
+      'O pijama existe exclusivamente para ser usado em casa, visto por ninguém, e trocado por uma roupa parecida no dia seguinte.',
+  },
+  {
+    id: '084',
+    category: 'absurdo',
+    title: 'O metrô',
+    expansion:
+      'No metrô, dezenas de pessoas fingem que as outras não existem enquanto estão a 20 centímetros de distância. É o único lugar onde isso é considerado educado.',
+  },
+  {
+    id: '085',
+    category: 'absurdo',
+    title: 'A reunião',
+    expansion:
+      'A maioria das reuniões poderia ter sido um e-mail. A maioria dos e-mails poderia ter sido uma mensagem. A maioria das mensagens não precisava existir.',
+  },
+  {
+    id: '086',
+    category: 'absurdo',
+    title: 'O café',
+    expansion:
+      'Café é uma droga psicoativa consumida socialmente antes das 9h da manhã por pessoas que ficariam inoperantes sem ela. Ninguém acha isso estranho.',
+  },
+  {
+    id: '087',
+    category: 'absurdo',
+    title: 'A lista de compras',
+    expansion:
+      'Você vai ao supermercado com uma lista e volta com o dobro do que precisava e sem metade do que foi buscar.',
+  },
+  {
+    id: '088',
+    category: 'absurdo',
+    title: 'O autocorreto',
+    expansion:
+      'O autocorreto foi criado para corrigir seus erros. Às vezes ele cria erros novos com tanta confiança que você não percebe até enviar.',
+  },
+  {
+    id: '089',
+    category: 'absurdo',
+    title: 'O relógio',
+    expansion:
+      'Você olha para o relógio, não registra a hora, e olha de novo. Isso acontece com todo mundo e ninguém sabe exatamente por quê.',
+  },
+  {
+    id: '090',
+    category: 'absurdo',
+    title: 'O carregador',
+    expansion:
+      'O carregador do celular está sempre no único cômodo da casa que você não está. Sem exceção.',
+  },
+
+  // --- misto (091–102) ---
+  {
+    id: '091',
+    category: 'misto',
+    title: 'A amizade',
+    expansion:
+      'Amizades adultas raramente são escolhidas — são resíduos de circunstâncias: trabalho, vizinhança, acaso. E mesmo assim algumas duram a vida toda.',
+  },
+  {
+    id: '092',
+    category: 'misto',
+    title: 'A rotina',
+    expansion:
+      'A rotina libera o cérebro de decisões repetitivas, mas pode fazer anos inteiros parecerem uma semana. Ela protege e aprisiona ao mesmo tempo.',
+  },
+  {
+    id: '093',
+    category: 'misto',
+    title: 'A tecnologia',
+    expansion:
+      'Cada ferramenta que facilita sua vida cria uma nova dependência. Você não pode mais se perder — e também não pode mais se encontrar por acidente.',
+  },
+  {
+    id: '094',
+    category: 'misto',
+    title: 'O envelhecimento',
+    expansion:
+      'Com o tempo, os anos passam mais rápido porque cada ano representa uma fração menor da sua vida total. Aos 10 anos, um ano é 10% de tudo. Aos 50, é 2%.',
+  },
+  {
+    id: '095',
+    category: 'misto',
+    title: 'A confiança',
+    expansion:
+      'Confiar em alguém é uma aposta sem garantia. Mas desconfiar de todo mundo tem um custo que poucas pessoas conseguem calcular.',
+  },
+  {
+    id: '096',
+    category: 'misto',
+    title: 'A mudança',
+    expansion:
+      'Mudar de ideia não é fraqueza — é sinal de que você aprendeu algo novo. A rigidez de opinião costuma ser confundida com integridade.',
+  },
+  {
+    id: '097',
+    category: 'misto',
+    title: 'O limite',
+    expansion:
+      'Você não sabe qual é seu limite até chegar nele. E quando chega, frequentemente descobre que ele estava além do que imaginava.',
+  },
+  {
+    id: '098',
+    category: 'misto',
+    title: 'A distância',
+    expansion:
+      'A distância física não desfaz vínculos verdadeiros, mas a distância emocional pode acabar com quem está no mesmo quarto.',
+  },
+  {
+    id: '099',
+    category: 'misto',
+    title: 'O conflito',
+    expansion:
+      'Todo conflito tem pelo menos duas narrativas igualmente verdadeiras para quem as vive. O problema começa quando só uma delas é contada.',
+  },
+  {
+    id: '100',
+    category: 'misto',
+    title: 'A aprendizagem',
+    expansion:
+      'Você aprende mais rápido quando erra do que quando acerta. O cérebro presta mais atenção ao que não funcionou do que ao que funcionou.',
+  },
+  {
+    id: '101',
+    category: 'misto',
+    title: 'A solidariedade',
+    expansion:
+      'Humanos são a única espécie que ajuda desconhecidos sem nenhuma vantagem direta. E também a única que constrói sistemas para evitar ter que fazer isso.',
+  },
+  {
+    id: '102',
+    category: 'misto',
+    title: 'O legado',
+    expansion:
+      'O que você quer deixar quando não estiver mais aqui? A maioria das pessoas nunca para para responder essa pergunta — e a vida vai respondendo por elas.',
+  },
 ];

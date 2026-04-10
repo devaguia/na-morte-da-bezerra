@@ -4,6 +4,14 @@
 
 ## [Não publicado]
 
+### Expansão da lista de assuntos — abril de 2026
+
+**Adicionado:**
+- `data/topics.ts` — 50 novos assuntos (IDs 053–102), distribuídos igualmente entre as 4 categorias: `filosofico` (053–065), `cientifico` (066–077), `absurdo` (078–090), `misto` (091–102)
+- Total da lista passa de 52 para 102 assuntos
+
+---
+
 ### Formulário de sugestão funcional — abril de 2026
 
 **Adicionado:**
