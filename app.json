@@ -10,8 +10,10 @@
     "ios": {
       "supportsTablet": false
     },
+    "icon": "./assets/bezerra.png",
     "android": {
       "adaptiveIcon": {
+        "foregroundImage": "./assets/bezerra.png",
         "backgroundColor": "#ffffff"
       }
     },
