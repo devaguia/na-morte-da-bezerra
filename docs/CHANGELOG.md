@@ -4,6 +4,23 @@
 
 ## [Não publicado]
 
+### Tela do assunto + utilitários — abril de 2026
+
+Implementação da tela do assunto completa e dos três utilitários de negócio.
+
+**Adicionado:**
+- `app/topic.tsx` — tela do assunto com loader de mensagens alternando (8 variações), título e frase de expansão sobre fundo colorido, rodapé fixo com botão de compartilhamento e link de sugestão
+- `app/suggest.tsx` — stub mínimo como destino de `/suggest`
+- `utils/randomizer.ts` — `getNextTopic` com controle de histórico via AsyncStorage (sem repetição até esgotar o ciclo, reset automático) e `resetHistory`
+- `utils/colors.ts` — `getRandomColor` com exclusão da cor atual e paleta de 8 cores
+- `utils/share.ts` — `shareTopic` via `Share.share` nativo com formato definido no ARCHITECTURE.md
+
+**Validado:**
+- Todos os edge cases cobertos: AsyncStorage vazio, ciclo esgotado, JSON corrompido, cancelamento do share, toque durante carregamento
+- `npx tsc --noEmit` sem erros
+
+---
+
 ### Tela inicial — abril de 2026
 
 Implementação da tela inicial do app (`app/index.tsx`) e stub da tela do assunto (`app/topic.tsx`).

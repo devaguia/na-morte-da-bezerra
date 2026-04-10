@@ -10,5 +10,7 @@ const PALETTE = [
 ];
 
 export function getRandomColor(excludeCurrent?: string): string {
-  throw new Error('Not implemented');
+  const available = PALETTE.filter((c) => c !== excludeCurrent);
+  const pool = available.length > 0 ? available : PALETTE;
+  return pool[Math.floor(Math.random() * pool.length)];
 }

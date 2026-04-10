@@ -210,10 +210,10 @@ A tarefa é: [descrição da tarefa]
 | Setup do projeto Expo | ✅ Concluído |
 | Lista inicial de assuntos | ✅ Concluído |
 | Tela inicial | ✅ Concluído |
-| Tela do assunto | ⏳ Pendente |
-| Lógica de sorteio com histórico | ⏳ Pendente |
+| Tela do assunto | ✅ Concluído |
+| Lógica de sorteio com histórico | ✅ Concluído |
 | Formulário de sugestão + backend | ⏳ Pendente |
-| Compartilhamento via Share API | ⏳ Pendente |
+| Compartilhamento via Share API | ✅ Concluído |
 | Polimento visual | ⏳ Pendente |
 | Build e publicação (EAS) | ⏳ Pendente |
 
