@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import {
   Animated,
-  Dimensions,
   KeyboardAvoidingView,
   Platform,
   Pressable,
@@ -11,26 +10,26 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { BlurView } from 'expo-blur';
 import { router } from 'expo-router';
 import { sendSuggestion } from '../utils/suggestions';
 
-const SCREEN_HEIGHT = Dimensions.get('window').height;
-const SLIDE_DURATION = 320;
+const FADE_DURATION = 320;
 
 export default function SuggestScreen() {
   const [text, setText] = useState<string>('');
   const [sent, setSent] = useState<boolean>(false);
   const [isSending, setIsSending] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
-  const translateY = useRef(new Animated.Value(SCREEN_HEIGHT)).current;
+  const opacity = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    Animated.timing(translateY, {
-      toValue: 0,
-      duration: SLIDE_DURATION,
+    Animated.timing(opacity, {
+      toValue: 1,
+      duration: FADE_DURATION,
       useNativeDriver: true,
     }).start();
-  }, [translateY]);
+  }, [opacity]);
 
   const handleSend = async () => {
     if (text.trim().length === 0) return;
@@ -56,13 +55,11 @@ export default function SuggestScreen() {
   return (
     <KeyboardAvoidingView
       style={styles.overlay}
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      <Pressable style={styles.backdrop} onPress={handleClose} />
+      <BlurView style={StyleSheet.absoluteFill} intensity={25} tint="dark" />
+      <Pressable style={StyleSheet.absoluteFill} onPress={handleClose} />
 
-      <Animated.View style={[styles.sheet, { transform: [{ translateY }] }]}>
-        <View style={styles.handle} />
-
+      <Animated.View style={[styles.sheet, { opacity }]}>
         <View style={styles.header}>
           <Text style={styles.title}>Sugerir assunto</Text>
           <TouchableOpacity onPress={handleClose} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
@@ -126,31 +123,22 @@ export default function SuggestScreen() {
 const styles = StyleSheet.create({
   overlay: {
     flex: 1,
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: 'transparent',
-  },
-  backdrop: {
-    flex: 1,
   },
   sheet: {
     backgroundColor: '#FFFFFF',
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
-    paddingBottom: 40,
+    borderRadius: 20,
+    paddingBottom: 32,
+    maxWidth: 400,
+    alignSelf: 'stretch',
+    marginHorizontal: 32,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: -4 },
-    shadowOpacity: 0.08,
-    shadowRadius: 12,
-    elevation: 8,
-  },
-  handle: {
-    width: 40,
-    height: 4,
-    backgroundColor: '#D4C4B8',
-    borderRadius: 2,
-    alignSelf: 'center',
-    marginTop: 12,
-    marginBottom: 4,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.15,
+    shadowRadius: 16,
+    elevation: 10,
   },
   header: {
     flexDirection: 'row',
@@ -224,6 +212,7 @@ const styles = StyleSheet.create({
     fontFamily: 'BJCree-Bold',
     fontSize: 22,
     color: '#3D2B1F',
+    textAlign: 'center'
   },
   successDescription: {
     fontFamily: 'BJCree-Regular',
