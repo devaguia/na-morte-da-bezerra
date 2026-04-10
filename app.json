@@ -8,13 +8,15 @@
     "platforms": ["ios", "android"],
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": false
+      "supportsTablet": false,
+      "bundleIdentifier": "com.nadmb.app"
     },
     "icon": "./assets/bezerra.png",
     "android": {
+      "package": "com.nadmb.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/bezerra.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#FBF3EB"
       }
     },
     "plugins": ["expo-router"]
